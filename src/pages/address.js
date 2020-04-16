@@ -63,9 +63,11 @@ const imgRepository = {
 }
 
 const IndexPage = ({navigate, location: {search}}) => {
+
   const selected = search.substr(7).slice(0, -1).split(',');
   const [address, setAddress] = useState("")
   const [phone, setPhone] = useState("")
+  const isSSR = typeof window === "undefined"
 
   return (
     <Layout>
@@ -73,7 +75,7 @@ const IndexPage = ({navigate, location: {search}}) => {
       <Heading>Please provide us your contact details</Heading>
       <Grid list>
         <div>
-          {selected.map(item => <ListItem item={imgRepository[item]} key={item} />)}
+          {!isSSR && selected.map(item => <ListItem Img={imgRepository[item].Img} text={imgRepository[item].text} key={item} />)}
         </div>
       </Grid>
       <Form>

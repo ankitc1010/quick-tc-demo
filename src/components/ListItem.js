@@ -12,7 +12,7 @@ import styled from "styled-components"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const ListItem = ({ item: {Img, text} }) => {
+const ListItem = ({ Img, text }) => {
   return (
     <StyledItem>
       <Img />
