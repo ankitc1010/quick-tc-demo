@@ -13,11 +13,11 @@ body {
   color: var(--textNormal);
   font-size: 10px !important;
   &.dark {
-    --bg: #131217;
-    --textNormal: #fff;
-    --textInverse: #000;
-    --textTitle: #dbdbdc;
-    --textTitleInverse: #000;
+    --bg: #fff;
+    --textNormal: rgba(0, 0, 0, 0.7);
+    --textInverse: #fff;
+    --textTitle: #303030;
+    --textTitleInverse: #dbdbdc;
     --link: #542c85;
   }
   &.light {
